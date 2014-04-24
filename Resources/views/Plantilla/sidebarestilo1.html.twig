@@ -1,0 +1,9 @@
+<div class="sidebar-contenido">
+    <ul>
+        {% for archivo in archivos %}
+        <li>{{ archivo.nombre }}</li>
+        {% else %}
+        <li>No hay archivos recientes</li>
+        {% endfor %}
+    </ul>
+</div>

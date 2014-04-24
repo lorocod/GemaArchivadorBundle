@@ -1,0 +1,131 @@
+<html>
+    <head>
+        <link href="{{asset('css/estilo1.css')}}" rel="stylesheet">
+    </head>
+    <body>
+        <div id="container">
+            <div class="nav-top-fija">
+                <div class="navbar-inner">
+                    <div class="nav-container">
+                        <span class="nav-logo">Logo</span>
+                        <ul class="nav-ul-izq">
+                            <li>Client Area</li>
+                            <li>Order Now</li>
+                            <li>Latest News</li>
+                            <li>Help & Support</li>
+                            <li>Contact Us</li>
+                        </ul>
+                        <ul class="nav-ul-der">
+                            <li>Cuenta</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="container-main">
+                <div class="contenido">
+                    <div class="page-header">
+                        <h1>{% block titulocontenido "Bienvenido al estilo 1" %}</h1>
+                    </div>
+                    <div class="page-contenido">
+                    {% block contenido %}bienvenido al theme con estilo 1. Sin nombre por el momento.
+                    {% endblock %} 
+                    </div>    
+                    <div class="page-sidebar">
+                        {% block sidebar %}
+                            {{ render(controller('GemaArchivadorBundle:Archivo:sidebar')) }}                            
+                        {% endblock %} 
+                    </div>
+                </div>
+            </div>
+            <div class="footer-personalizado">
+                <div class="contenido-footer-top">
+                    <div class="row footer">
+                        <div class="three columns">
+                                <div class="footer_menu">
+                                        <h3>NZ Web Hosting</h3>
+                                        <ul id="mc_menu_1" class="mc_menu mc_depth_0">
+                                        <li id="menu_item_1" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/webhostingnz" title="" rel="">Everyday Linux Hosting</a></li>
+                                        <li id="menu_item_2" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/windowshosting" title="" rel="">Everyday Windows Hosting</a></li>
+                                        <li id="menu_item_3" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/businesshosting" title="" rel="">Business Linux Hosting</a></li>
+                                        <li id="menu_item_4" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/windowsbusinesshosting" title="" rel="">Business Windows Hosting</a></li>
+                                        <li id="menu_item_5" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/resellerhosting" title="" rel="">Reseller Linux Hosting</a></li>
+                                        <li id="menu_item_6" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/windowsreseller" title="" rel="">Reseller  Windows Hosting</a></li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="three columns second_menu_out">
+                                <div class="footer_menu">
+                                        <h3>Help &amp; Support</h3>
+                                        <ul id="mc_menu_2" class="mc_menu mc_depth_0">
+                                        <li id="menu_item_7" class="mc_menu_item external_link "><a href="files://support.247hosting.co.nz/submitticket.php" title="" rel="">Submit a Support Ticket</a></li>
+                                        <li id="menu_item_8" class="mc_menu_item external_link "><a href="files://support.247hosting.co.nz/supporttickets.php" title="" rel="">View Your Current Tickets</a></li>
+                                        <li id="menu_item_9" class="mc_menu_item external_link "><a href="file://support.247hosting.co.nz/knowledgebase.php" title="" rel="">Visit the Knowledge Base</a></li>
+                                        <li id="menu_item_10" class="mc_menu_item external_link "><a href="file://support.247hosting.co.nz/knowledgebase/178/cPanel-Control-Panel" title="" rel="">Linux Hosting Tutorials</a></li>
+                                        <li id="menu_item_11" class="mc_menu_item external_link "><a href="file://support.247hosting.co.nz/knowledgebase/199/Plesk-Control-Panel" title="" rel="">Windows Hosting Tutorials</a></li>
+                                        <li id="menu_item_12" class="mc_menu_item external_link "><a href="file://support.247hosting.co.nz/knowledgebase/9/Setting-Up-Emails" title="" rel="">Email Client Setup</a></li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="three columns">
+                                <div class="footer_menu">
+                                        <h3>Other Services</h3>
+                                        <ul id="mc_menu_3" class="mc_menu mc_depth_0">
+                                        <li id="menu_item_13" class="mc_menu_item external_link "><a href="files://support.247hosting.co.nz/cart.php?a=add&amp;domain=register" title="" rel="">$18 Domain Names</a></li>
+                                        <li id="menu_item_14" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/wordpresshosting" title="" rel="">Wordpress Hosting</a></li>
+                                        <li id="menu_item_15" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/joomlahosting" title="" rel="">Joomla Hosting</a></li>
+                                        <li id="menu_item_16" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/opencarthosting" title="" rel="">OpenCart Hosting</a></li>
+                                        <li id="menu_item_17" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/pci-compliance" title="" rel="">PCI Compliance</a></li><li id="menu_item_18" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/acceptcreditcards" title="" rel="">Accept Credit Card Payments</a></li>
+                                        </ul>
+                                </div>
+                        </div>
+                        <div class="three columns last_menu_out">
+                                <div class="footer_menu">
+                                        <h3>About 24/7 Hosting</h3>
+                                        <ul id="mc_menu_4" class="mc_menu mc_depth_0">
+                                        <li id="menu_item_19" class="mc_menu_item wordpress_link "><a href="files://support.247hosting.co.nz/aboutus" title="" rel="">About Us</a></li>
+                                        <li id="menu_item_20" class="mc_menu_item external_link "><a href="file://support.247hosting.co.nz/serverstatus.php" title="" rel="">Current Server Status</a></li>
+                                        <li id="menu_item_21" class="mc_menu_item external_link "><a href="file://support.247hosting.co.nz/announcements.php" title="" rel="">News &amp; Announcements</a></li>
+                                        <li id="menu_item_22" class="mc_menu_item external_link "><a href="file://247hostingreviews.co.nz/" title="" rel="">Customer Reviews</a></li>
+                                        <li id="menu_item_23" class="mc_menu_item wordpress_link "><a href="files://support.247hosting.co.nz/ourdatacentre" title="" rel="">Our Data Centre's</a></li>
+                                        <li id="menu_item_24" class="mc_menu_item external_link "><a href="files://support.247hosting.co.nz/submitticket.php?step=2&amp;deptid=12" title="" rel="">Contact us</a></li>
+                                        </ul>
+                                </div>
+                        </div>
+                    </div>
+                 {#    <div class="row social_network_outer">
+                        <div class="social_network">
+                                <div class="follw_us_title"></div>
+                                <ul>
+                                <li><a class="facebook_link" href="file://www.facebook.com/247hostingnz" target="_blank"></a></li><li><a class="twitter_link" href="file://www.twitter.com/247chch" target="_blank"></a></li>
+                                </ul>
+                        </div>
+                    </div>
+                #}
+                </div>
+                <div class="contenido-footer-bottom">
+                   <div class="row">
+                        <div class="twelve columns">
+                                <div class="footer_bottom">
+                                        <div class="footer_copywrite">
+                                            <ul>
+                                                <li>© 2007 - 2012 KLiB Technologies Group. All rights reserved.</li>
+                                                <li class="last">All prices are in NZD &amp; exclude GST.</li>
+                                            </ul>
+                                        </div>
+                                        <div class="footer_bottom_menu">
+                                            <ul id="mc_menu_5" class="mc_menu mc_depth_0">
+                                                <li id="menu_item_25" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/sitemap" title="" rel="">Site Map</a></li>
+                                                <li id="menu_item_26" class="mc_menu_item external_link "><a href="files://support.247hosting.co.nz/submitticket.php?step=2&amp;deptid=13" title="" rel="">Report A Fault</a></li>
+                                                <li id="menu_item_27" class="mc_menu_item wordpress_link "><a href="file://247hosting.co.nz/legalstuff" title="" rel="">Legal Stuff</a></li>
+                                            </ul>
+                                        </div>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </body>
+</html>
+

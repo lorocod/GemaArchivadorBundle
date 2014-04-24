@@ -1,0 +1,21 @@
+{% extends "GemaArchivadorBundle:Default:estilo1.html.twig" %}
+
+{% block titulocontenido "Agregar archivo" %}
+{% block contenido %}
+
+
+{% embed "GemaArchivadorBundle:Plantilla:formularioestilo1.html.twig" %}
+    {% block formulario %}
+        <form action="{{ path('archivo_crear') }}" method="post" {{ form_enctype(form) }}  >
+
+        {{form_widget(form)}}
+        {{form_rest(form)}}
+
+        <div style="margin-left:auto; margin-right:auto; margin-top:20px;">
+            <button type="button" onclick="submit()" class="btn boton" style="margin-left:auto; margin-right:auto;">Submit</button>
+        </div>
+        </form>
+    {% endblock %}   
+{% endembed %}
+{% endblock %}   
+

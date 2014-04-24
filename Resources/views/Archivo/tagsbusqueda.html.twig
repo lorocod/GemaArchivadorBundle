@@ -1,0 +1,60 @@
+{# empty Twig template #}
+<html>
+    <head>    </head>
+    
+    
+<body>
+    <div id="container" style="margin: auto;width: 1000px">    
+<form action="" method="POST">
+
+    <input type="text" name="buscado" size="100">
+    <input type="submit" value="Enviar" >
+</form>
+
+
+{% if archivos is defined %}
+
+<table class="records_list" width="100%" border="0" cellspacing="0">
+	<tr>
+		<th style="background-color:#1E90FF;">Id</th>
+		<th style="background-color:#1E90FF;">Nombre</th>
+		<th style="background-color:#1E90FF;">Ubicacion</th>
+		<th style="background-color:#1E90FF;">Tamaño</th>
+		<th style="background-color:#1E90FF;">IdUnico</th>
+		<th style="background-color:#1E90FF;">Tags</th>	
+	</tr>
+	{% for archivo in archivos%}
+	<tr>	{# {% set archivo = tag.archivos[0] %} #}
+		<td class="id">
+			{{ archivo.id }}
+		</td>
+		<td class="nombre">
+			{{ archivo.nombre }}
+		</td>
+		<td>
+			<a href="{{ archivo.link }}">{{ archivo.RutaWeb }}</a>
+		</td>
+		<td>
+			{{ archivo.tamTexto }}
+		</td>
+		<td>
+			{{ archivo.idUnico }}
+		</td>
+		<td class="nombre">
+			{{ archivo.texttags}}
+		</td>
+		
+			
+	</tr>
+	{% endfor %}
+
+</table>
+{% endif %}
+	
+	
+
+
+</div>
+</div>
+</body>	
+</html>

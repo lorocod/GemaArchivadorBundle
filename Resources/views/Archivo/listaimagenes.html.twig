@@ -1,0 +1,41 @@
+<script src="{{ asset('js/jquery-1.7.2.js') }}" type="text/javascript"></script>
+<table class="records_list" width="50%" border="0" cellspacing="0">
+	<tr>
+		<th style="background-color:#1E90FF;">Id</th>
+		<th style="background-color:#1E90FF;">Nombre</th>
+		<th style="background-color:#1E90FF;">Ubicacion</th>
+		<th style="background-color:#1E90FF;">Tamaño</th>
+		<th style="background-color:#1E90FF;">Borrar</th>
+	</tr>
+	{% for imagen in imagenes%}
+	<tr>
+		<td class="id">
+			{{ imagen.id }}
+		</td>
+		<td class="nombre">
+			{{ imagen.archivo.nombre }}
+		</td>
+		<td>
+			<a href="{{ imagen.archivo.link }}">{{ imagen.archivo.RutaWeb }}</a>
+		</td>
+		<td>
+			{{ imagen.archivo.tamTexto }}
+		</td>			
+		<td>
+		    <span onclick="confirmar(this,'{{path('archivo_borrar', { 'id' : imagen.archivo.id } )}}')" style="cursor: pointer"><strong>Borrar</strong></span>		    
+		</td>		
+                <td>
+                    <a href="{{ imagen.url }}">Abrir</a>
+			
+		</td>			
+	</tr>
+	{% endfor %}
+	<script>
+	function confirmar(obj,ruta){
+	    imagen = $.trim($(obj).parent().parent().children('.nombre').html());	    
+	    id = $.trim($(obj).parent().parent().children('.id').html());
+	    r = confirm ('Se eliminara el imagen \"' + imagen + "\" (id: " + id +") ¿Desea continuar?");
+	    if(r == true)location.href = ruta;
+	}
+	</script>
+</table>
